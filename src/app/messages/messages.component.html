@@ -1,0 +1,9 @@
+<form [formGroup]="adasForm" (ngSubmit)="onSubmit()">
+
+  <label>
+    ADAS Id:
+    <input type="text" formControlName="adasId" required>
+  </label>
+  <button type="submit" mat-icon-button color="primary" aria-label="Send adas message to Halo" [disabled]="!adasForm.valid"><mat-icon>forward</mat-icon></button>
+</form>
+<p *ngIf="id">Sent adas message value: {{id}}</p>
